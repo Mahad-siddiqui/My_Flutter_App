@@ -1,4 +1,4 @@
-# 🚀 Complete Flutter Guide for MERN Stack Developers
+# 🚀 Complete Flutter Guide
 
 Welcome! This guide is specially designed for **MERN (MongoDB, Express, React, Node.js)** developers who want to transition into **Flutter** mobile app development.
 
