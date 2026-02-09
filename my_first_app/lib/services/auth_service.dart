@@ -77,10 +77,18 @@ class AuthService {
   // Helper: Get all users
   static Future<List<User>> getAllUsers() async {
     final jsonList = await StorageService.getStringList(_usersKey);
-    return jsonList.map((jsonString) {
-      final json = jsonDecode(jsonString) as Map<String, dynamic>;
-      return User.fromJson(json);
-    }).toList();
+    
+    List<User> users = [];
+    for (String jsonString in jsonList) {
+      try {
+        final json = jsonDecode(jsonString) as Map<String, dynamic>;
+        users.add(User.fromJson(json));
+      } catch (e) {
+        // Skip invalid entries (old format)
+        print('Skipping invalid user data: $jsonString');
+      }
+    }
+    return users;
   }
 
   // Helper: Save all users
