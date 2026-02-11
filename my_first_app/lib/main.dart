@@ -102,7 +102,7 @@
 //   ));
 // }
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
 // void main() {
 //   // runApp(Container(color: Colors.blue));
@@ -173,6 +173,10 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
+
+import 'package:flutter/material.dart';
+import 'package:my_first_app/screens/login_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -181,44 +185,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.purple[600],
-        ),
-        floatingActionButton: FloatingActionButton(onPressed: () {}, child: Text(":-)")),
-        drawer: Container(
-          width: 400,
-          height: 500,
-          color: Colors.red,
-        ),
-        body: Column(
-          children: [
-            Text("Hello welcome to flutter"),
-            Text("Login to continue"),
-            TextField(
-
-              decoration: InputDecoration(
-                hintText: "Enter your name",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                hintText: "Enter your password",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-            ),
-            TextButton(onPressed: (){print('clicked');}, child: Text("Forgot Password?")),
-            
-            ElevatedButton(onPressed: () {}, child: Text("Login")),
-            // ElevatedButton(onPressed: () {}, child: Text("Click Meii")),
-          ],
-        ),
-      ),
+      home: LoginPage(),
     );
   }
 }
