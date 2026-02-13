@@ -178,33 +178,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_first_app/screens/login_page.dart';
+import 'package:my_first_app/screens/signup_page.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
+void main() {
+  runApp(MyApp());
+}
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: LoginPage(), // my login page is in screens/login_page.dart
-//     );
-//   }
-// }
-
- 
- void main() {
-  runApp(const MyApp());
- }
-
- class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const LoginPage(),
+      // home: LoginPage(), // my login page is in screens/login_page.dart
+      home:SignUpPage(),
+
+
     );
   }
- }
+}
+
